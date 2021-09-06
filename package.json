@@ -1,5 +1,5 @@
 {
-  "name": "kratos-verify-session",
+  "name": "@anciitk/kratos-verify-session",
   "version": "1.0.0",
   "description": "Propreity package to check Ory Kratos session and handle redirects accordingly",
   "author": "Mshivam2409",
