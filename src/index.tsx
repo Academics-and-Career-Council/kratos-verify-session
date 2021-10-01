@@ -2,25 +2,27 @@ import React, { useEffect, useState } from 'react'
 import type { AxiosError } from 'axios' // eslint-disable-line
 import Result from 'antd/lib/result'
 import Button from 'antd/lib/button'
-import 'antd/dist/antd.css'
-// import styles from './styles.module.css' // eslint-disable-line
-import type { V0alpha1Api } from '@ory/kratos-client' // eslint-disable-line
+import Xenon, { UserCredentials } from '@anciitk/xenon-js'
+import './styles.module.css' // eslint-disable-line
+import { V0alpha1Api, Session } from '@ory/kratos-client' // eslint-disable-line
 
 import Loader from './Loader'
+
+export interface SessionState {
+  active: boolean
+  logoutUrl: string
+  user: UserCredentials
+  session: Session
+}
 
 interface Props {
   loginUrl: string
   path: string
   basePath: string
   historyPush: (route: string) => void
-  setSessionState: ({
-    active,
-    logoutUrl
-  }: {
-    active: boolean
-    logoutUrl: string
-  }) => void
+  setSessionState: (session: SessionState) => void
   ory: V0alpha1Api
+  xenon: Xenon
 }
 
 const VerifyPage: React.FC<Props> = ({
@@ -29,19 +31,31 @@ const VerifyPage: React.FC<Props> = ({
   basePath,
   path,
   historyPush,
-  setSessionState
+  setSessionState,
+  xenon
 }) => {
   const [err, setErr] = useState<AxiosError>()
 
   useEffect(() => {
     ory
       .toSession()
-      .then(() => {
-        setSessionState({ active: true, logoutUrl: '' })
+      .then(({ data: session }) => {
         ory
           .createSelfServiceLogoutFlowUrlForBrowsers()
-          .then(({ data }) => {
-            setSessionState({ active: true, logoutUrl: data.logout_url || '' })
+          .then(({ data: logout }) => {
+            xenon
+              .whoami()
+              .then((user) => {
+                setSessionState({
+                  active: true,
+                  logoutUrl: logout.logout_url || '',
+                  user: user,
+                  session: session
+                })
+              })
+              .catch((err) => {
+                throw new Error(err)
+              })
           })
           .catch((err) => {
             return Promise.reject(err)
@@ -51,6 +65,7 @@ const VerifyPage: React.FC<Props> = ({
       .catch((err) => {
         switch (err.response?.status) {
           case 403:
+            window.location.href = `${loginUrl}`
           case 401:
             window.location.href = `${loginUrl}?return_to=${basePath}/${path}`
             return

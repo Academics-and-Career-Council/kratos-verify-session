@@ -61,6 +61,7 @@
     "dist"
   ],
   "dependencies": {
+    "@anciitk/xenon-js": "1.0.4",
     "@ory/kratos-client": "0.7.3-alpha.6",
     "antd": "^4.16.13",
     "axios": "^0.22.0"

@@ -7,6 +7,8 @@ import { V0alpha1Api, Configuration } from '@ory/kratos-client'
 import VerifyPage from 'kratos-verify-session'
 import 'kratos-verify-session/dist/index.css'
 
+import 'antd/dist/antd.css'
+
 const instance = axios.create({
   baseURL: 'http://localhost:4433',
   withCredentials: true
