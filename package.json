@@ -1,6 +1,6 @@
 {
   "name": "@anciitk/kratos-verify-session",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Propreity package to check Ory Kratos session and handle redirects accordingly",
   "author": "Mshivam2409",
   "license": "MIT",
