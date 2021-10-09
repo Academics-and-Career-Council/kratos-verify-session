@@ -15,15 +15,52 @@ npm install --save kratos-verify-session
 ```tsx
 import React, { Component } from 'react'
 
-import MyComponent from 'kratos-verify-session'
+import Verify from 'kratos-verify-session'
 import 'kratos-verify-session/dist/index.css'
 
 class Example extends Component {
   render() {
-    return <MyComponent />
+    return <Verfiy 
+      loginUrl: 'url to login page'
+      basePath: 'basePath of your main application' //eg http://localhost:3000
+      path: 'on path that you want to go' //eg dashboard
+      historyPush: 'funtion to push the new route in history'
+      setSessionState: 'funtion to update session state'
+      xenon: 'pass a xenon reference aftrer importing in your application'
+      ory: 'locally defined ory instance in your application'
+    />
   }
 }
 ```
+
+## session state
+
+```tsx
+interface sessionState {
+  active: boolean
+  logoutUrl: string
+  user: UserCrediantials //type obtained from @anciitk/xenon
+  session: Session //type obtained from @ory/kratos-client
+}
+```
+
+## historyPush
+
+### for react
+
+const app = ({history}) => {
+  // this function was provided by react router
+  history.push(/something)
+}
+
+### for next
+
+import {useRouter} from 'next/router'
+
+const app = () => {
+  const router = useRouter();
+  historyPush = router.push;
+}
 
 ## License
 
