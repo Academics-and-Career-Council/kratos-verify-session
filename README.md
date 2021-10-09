@@ -48,19 +48,23 @@ interface sessionState {
 
 ### for react
 
+```tsx
 const app = ({history}) => {
   // this function was provided by react router
   history.push(/something)
 }
+```
 
 ### for next
 
+```tsx
 import {useRouter} from 'next/router'
 
 const app = () => {
   const router = useRouter();
   historyPush = router.push;
 }
+```
 
 ## License
 
