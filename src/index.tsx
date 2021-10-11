@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import type { AxiosError } from 'axios' // eslint-disable-line
 import Result from 'antd/lib/result'
 import Button from 'antd/lib/button'
-import Xenon, { UserCredentials } from '@anciitk/xenon-js'
+import { Xenon, UserCredentials } from '@anciitk/xenon-js'
 import './styles.module.css' // eslint-disable-line
 import { V0alpha1Api, Session } from '@ory/kratos-client' // eslint-disable-line
 
@@ -20,6 +20,7 @@ interface Props {
   path: string
   basePath: string
   historyPush: (route: string) => void
+  sessionState: SessionState
   setSessionState: (session: SessionState) => void
   ory: V0alpha1Api
   xenon: Xenon
@@ -31,6 +32,7 @@ const VerifyPage: React.FC<Props> = ({
   basePath,
   path,
   historyPush,
+  sessionState,
   setSessionState,
   xenon
 }) => {
@@ -60,7 +62,6 @@ const VerifyPage: React.FC<Props> = ({
           .catch((err) => {
             return Promise.reject(err)
           })
-        historyPush(`/${path}`)
       })
       .catch((err) => {
         switch (err.response?.status) {
@@ -74,6 +75,12 @@ const VerifyPage: React.FC<Props> = ({
         return Promise.reject(err)
       })
   }, [])
+
+  useEffect(() => {
+    if (sessionState.active) {
+      historyPush(`/${path}`)
+    }
+  }, [sessionState])
 
   return (
     <div>

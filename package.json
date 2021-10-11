@@ -1,6 +1,6 @@
 {
   "name": "@anciitk/kratos-verify-session",
-  "version": "1.0.3",
+  "version": "1.1.8",
   "description": "Propreity package to check Ory Kratos session and handle redirects accordingly",
   "author": "Mshivam2409",
   "license": "MIT",
@@ -61,8 +61,8 @@
     "dist"
   ],
   "dependencies": {
-    "@anciitk/xenon-js": "1.0.4",
-    "@ory/kratos-client": "0.7.3-alpha.6",
+    "@anciitk/xenon-js": "1.0.8",
+    "@ory/kratos-client": "0.7.6-alpha.6",
     "antd": "^4.16.13",
     "axios": "^0.22.0"
   }
