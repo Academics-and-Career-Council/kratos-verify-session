@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@anciitk/xenon-js@1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@anciitk/xenon-js/-/xenon-js-1.0.4.tgz#a449fe9bfe35e0cedb1c7a9d7bfb98d1bd6c5a3c"
-  integrity sha512-ZqCynP4rxMFeAjHSIDoVRzZqUtxprZkNVyOTZZAMPGDwgMfhD+U8B0Umo8VT/M7lFqod9s+L8Q3uZUGkuxwBJA==
+"@anciitk/xenon-js@1.0.8":
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/@anciitk/xenon-js/-/xenon-js-1.0.8.tgz#5c4a1faa8a437afb12ac2c7b07fa7851b214ed28"
+  integrity sha512-/L31dFslC1j93eSUct9v8QFIxsoGA1cTm+sRwsgSScFMS7H4zzdUq1+CEGOqE0losenR6gtI+jbxJyQ3CF3hTQ==
   dependencies:
     axios "^0.21.4"
 
@@ -252,10 +252,10 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@ory/kratos-client@0.7.3-alpha.6":
-  version "0.7.3-alpha.6"
-  resolved "https://registry.yarnpkg.com/@ory/kratos-client/-/kratos-client-0.7.3-alpha.6.tgz#39b1bab79a406492494b1ad7d9773578ef38601e"
-  integrity sha512-mi6RGy3za6HpO+ejfIUebNfzTTBRVHFXbkQesu2Xxi7e1y4tOuKgpj9W0DAmpITpOYCgyDS/YPFMT2rZUWxaJA==
+"@ory/kratos-client@0.7.6-alpha.6":
+  version "0.7.6-alpha.6"
+  resolved "https://registry.yarnpkg.com/@ory/kratos-client/-/kratos-client-0.7.6-alpha.6.tgz#4098303d863f5cf3af94924bc15e32721ab7f019"
+  integrity sha512-RulYhliYNGNGlDHDgzNy1yCfeyTmktrfHQM9beOFSVZjar5CVfhPlLv9f7xd2yWCWrPTJ+RlqVp4GyedSiQkNw==
   dependencies:
     axios "^0.21.1"
 
@@ -1510,9 +1510,9 @@ flatted@^3.1.0:
   integrity sha512-JaTY/wtrcSyvXJl4IMFHPKyFur1sE9AUqc0QnhOaJ0CxHtAoIV8pYDzeEfAaNEtGkOfq4gr3LBFmdXW5mOQFnA==
 
 follow-redirects@^1.14.0, follow-redirects@^1.14.4:
-  version "1.14.4"
-  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.14.4.tgz#838fdf48a8bbdd79e52ee51fb1c94e3ed98b9379"
-  integrity sha512-zwGkiSXC1MUJG/qmeIFH2HBJx9u0V46QGUe3YR1fXG8bXQxq7fLj0RjLZQ5nubr9qNJUZrH+xUcwXEoXNpfS+g==
+  version "1.14.8"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.14.8.tgz#016996fb9a11a100566398b1c6839337d7bfa8fc"
+  integrity sha512-1x0S9UVJHsQprFcEC/qnNzBLcIxsjAV905f/UkQxbclCsoTWlacCNOpQa/anodLl2uaEKFhfWOvM2Qg77+15zA==
 
 foreach@^2.0.5:
   version "2.0.5"
@@ -1981,10 +1981,10 @@ json5@^1.0.1:
     object.assign "^4.1.2"
 
 "kratos-verify-session@link:..":
-  version "1.0.0"
+  version "1.1.8"
   dependencies:
-    "@anciitk/xenon-js" "1.0.4"
-    "@ory/kratos-client" "0.7.3-alpha.6"
+    "@anciitk/xenon-js" "1.0.8"
+    "@ory/kratos-client" "0.7.6-alpha.6"
     antd "^4.16.13"
     axios "^0.22.0"
 
