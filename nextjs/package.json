@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "11.1.2",
+    "next": "12.1.0",
     "react": "link:../node_modules/react",
     "react-dom": "link:../node_modules/react-dom",
     "kratos-verify-session": "link:.."
