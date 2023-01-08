@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@anciitk/xenon-js@1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@anciitk/xenon-js/-/xenon-js-1.0.4.tgz#a449fe9bfe35e0cedb1c7a9d7bfb98d1bd6c5a3c"
-  integrity sha512-ZqCynP4rxMFeAjHSIDoVRzZqUtxprZkNVyOTZZAMPGDwgMfhD+U8B0Umo8VT/M7lFqod9s+L8Q3uZUGkuxwBJA==
+"@anciitk/xenon-js@1.0.8":
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/@anciitk/xenon-js/-/xenon-js-1.0.8.tgz#5c4a1faa8a437afb12ac2c7b07fa7851b214ed28"
+  integrity sha512-/L31dFslC1j93eSUct9v8QFIxsoGA1cTm+sRwsgSScFMS7H4zzdUq1+CEGOqE0losenR6gtI+jbxJyQ3CF3hTQ==
   dependencies:
     axios "^0.21.4"
 
@@ -252,10 +252,10 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@ory/kratos-client@0.7.3-alpha.6":
-  version "0.7.3-alpha.6"
-  resolved "https://registry.yarnpkg.com/@ory/kratos-client/-/kratos-client-0.7.3-alpha.6.tgz#39b1bab79a406492494b1ad7d9773578ef38601e"
-  integrity sha512-mi6RGy3za6HpO+ejfIUebNfzTTBRVHFXbkQesu2Xxi7e1y4tOuKgpj9W0DAmpITpOYCgyDS/YPFMT2rZUWxaJA==
+"@ory/kratos-client@0.7.6-alpha.6":
+  version "0.7.6-alpha.6"
+  resolved "https://registry.yarnpkg.com/@ory/kratos-client/-/kratos-client-0.7.6-alpha.6.tgz#4098303d863f5cf3af94924bc15e32721ab7f019"
+  integrity sha512-RulYhliYNGNGlDHDgzNy1yCfeyTmktrfHQM9beOFSVZjar5CVfhPlLv9f7xd2yWCWrPTJ+RlqVp4GyedSiQkNw==
   dependencies:
     axios "^0.21.1"
 
@@ -1966,9 +1966,9 @@ json2mq@^0.2.0:
     string-convert "^0.2.0"
 
 json5@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/json5/-/json5-1.0.1.tgz#779fb0018604fa854eacbf6252180d83543e3dbe"
-  integrity sha512-aKS4WQjPenRxiQsC93MNfjx+nbF4PAdYzmd/1JIj8HYzqfbu86beTuNgXDzPknWk0n0uARlyewZo4s++ES36Ow==
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/json5/-/json5-1.0.2.tgz#63d98d60f21b313b77c4d6da18bfa69d80e1d593"
+  integrity sha512-g1MWMLBiz8FKi1e4w0UyVL3w+iJceWAFBAaBnnGKOpNa5f8TLktkbre1+s6oICydWAm+HRUGTmI+//xv2hvXYA==
   dependencies:
     minimist "^1.2.0"
 
@@ -1981,10 +1981,10 @@ json5@^1.0.1:
     object.assign "^4.1.2"
 
 "kratos-verify-session@link:..":
-  version "1.0.0"
+  version "1.1.8"
   dependencies:
-    "@anciitk/xenon-js" "1.0.4"
-    "@ory/kratos-client" "0.7.3-alpha.6"
+    "@anciitk/xenon-js" "1.0.8"
+    "@ory/kratos-client" "0.7.6-alpha.6"
     antd "^4.16.13"
     axios "^0.22.0"
 
@@ -2141,9 +2141,9 @@ minimatch@^3.0.4:
     brace-expansion "^1.1.7"
 
 minimist@^1.2.0:
-  version "1.2.5"
-  resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.5.tgz#67d66014b66a6a8aaa0c083c5fd58df4e4e97602"
-  integrity sha512-FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw==
+  version "1.2.7"
+  resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.7.tgz#daa1c4d91f507390437c6a8bc01078e7000c4d18"
+  integrity sha512-bzfL1YUZsP41gmu/qjrEk0Q6i2ix/cVeAhbCbqH9u3zYutS1cLg00qhrD0M2MVdCcx4Sc0UpP2eBWo9rotpq6g==
 
 moment@^2.24.0, moment@^2.25.3:
   version "2.29.1"
